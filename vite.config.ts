@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: process.env.GITHUB_ACTIONS ? '/Gemini-4-Model-Periodic-Table/' : './',
     plugins: [
       react(),
       tailwindcss(),
